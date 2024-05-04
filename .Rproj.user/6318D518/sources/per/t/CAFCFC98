@@ -1,12 +1,12 @@
 {
-    "id": "E2EA769B",
-    "path": "~/GitHub/Socio-quanti/06_DM.R",
-    "project_path": "06_DM.R",
+    "id": "CAFCFC98",
+    "path": "~/GitHub/Socio-quanti/01_script AGE et PROTEGO.R",
+    "project_path": "01_script AGE et PROTEGO.R",
     "type": "r_source",
-    "hash": "579645346",
+    "hash": "2245742583",
     "contents": "",
     "dirty": false,
-    "created": 1714836589211.0,
+    "created": 1714838353941.0,
     "source_on_save": false,
     "relative_order": 2,
     "properties": {
@@ -14,11 +14,11 @@
         "Source": "Source"
     },
     "folds": "",
-    "lastKnownWriteTime": 1714833706,
+    "lastKnownWriteTime": 1714837875,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1714833706,
+    "last_content_update": 1714837875,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -64,7 +64,7 @@ graph_export <- ggplot(bnum22, aes(x = PCSc, fill = PROTEGO)) +
   ggtitle("Vigilance envers les données par groupe socioprofessionnel") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-
+#bon en fait il sert pas à grand chose
 
 ggsave("sorties/Graphique_PCS.png", plot = graph_export, width = 6, height = 3, bg = "white")
 

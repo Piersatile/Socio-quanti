@@ -1,19 +1,17 @@
 {
-    "id": "7E931084",
-    "path": "~/GitHub/Socio-quanti/00_Recodage_G1.R",
-    "project_path": "00_Recodage_G1.R",
+    "id": "062C67FB",
+    "path": "~/GitHub/Socio-quanti/00_Recodage.R",
+    "project_path": "00_Recodage.R",
     "type": "r_source",
     "hash": "1564332675",
     "contents": "",
     "dirty": false,
-    "created": 1714836617572.0,
+    "created": 1714838348836.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
-        "Source": "Source",
-        "cursorPosition": "16,0",
-        "scrollLine": "0"
+        "Source": "Source"
     },
     "folds": "",
     "lastKnownWriteTime": 1713542051,
