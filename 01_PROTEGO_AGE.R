@@ -42,6 +42,8 @@ write.csv2(lprop_age_protego, file = "Sorties/AGE_QUINTILE_PROTEGO_lprop.csv", f
 
 library(ggplot2)
 
+#Graph selon les effectifs
+
 graph_export <- ggplot(bnum22, aes(x = AGE_QUINTILE, fill = PROTEGO)) +
   geom_bar(position = "dodge") +
   labs(x = "Catégorie d'âge", y = "Nombre d'observations", fill = "Vigilance envers les données") +
@@ -51,3 +53,22 @@ graph_export <- ggplot(bnum22, aes(x = AGE_QUINTILE, fill = PROTEGO)) +
 
 
 ggsave("sorties/Graphique_AGE.png", plot = graph_export, width = 6, height = 3, bg = "white")
+
+
+
+
+#Graph selon les pourcentages en ligne
+
+graph_export <- ggplot(data = as.data.frame(lprop_age_protego), aes(x = Var1, y = Freq, fill = Var2)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "Catégorie d'âge", y = "Pourcentage", fill = "Vigilance envers les données") +
+  ggtitle("Vigilance envers les données par catégorie d'âge") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+ggsave("sorties/Graphique_AGE.png", plot = graph_export, width = 6, height = 3, bg = "white")
+
+
+
+
+
