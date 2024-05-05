@@ -1,26 +1,26 @@
 {
-    "id": "9A7D8F07",
-    "path": "~/GitHub/Socio-quanti/02_PROTEGO_PCS_SEXE.R",
-    "project_path": "02_PROTEGO_PCS_SEXE.R",
+    "id": "0B406179",
+    "path": "~/GitHub/Socio-quanti/02_PROTEGO_AGE.R",
+    "project_path": "02_PROTEGO_AGE.R",
     "type": "r_source",
-    "hash": "2182449578",
+    "hash": "1736679104",
     "contents": "",
     "dirty": false,
-    "created": 1714912437114.0,
+    "created": 1714919844222.0,
     "source_on_save": false,
     "relative_order": 3,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "55,0",
-        "scrollLine": "44"
+        "cursorPosition": "36,0",
+        "scrollLine": "14"
     },
     "folds": "",
-    "lastKnownWriteTime": 1714913464,
+    "lastKnownWriteTime": 1714918810,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1714913464215,
+    "last_content_update": 1714918810,
     "read_only": false,
     "read_only_alternatives": []
 }

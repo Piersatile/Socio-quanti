@@ -33,34 +33,22 @@ table(bnum22$PROTEGO, bnum22$PCSc, useNA="ifany")
 lprop(table(bnum22$PROTEGO, bnum22$PCSc, useNA="ifany"))
 chisq.test(table(bnum22$PROTEGO, bnum22$PCSc, useNA="ifany")) #on peut 
 
-#tri croisé PROTEGO SEXE
-table(bnum22$SEXE, useNA="ifany")
-table (bnum22$PROTEGO, bnum22$SEXE, useNA="ifany")
-lprop(table(bnum22$PROTEGO, bnum22$SEXE, useNA="ifany"))
-chisq.test(table (bnum22$PROTEGO, bnum22$SEXE, useNA="ifany")) #c'est juste
-
 #tableaux PROTEGO et PCSc
 write.csv2(table(bnum22$PCSc, bnum22$PROTEGO, useNA="ifany"), 
            file="Sorties/PROTE_PCS_eff.csv", fileEncoding = "UTF-8")
 write.csv2(lprop(table(bnum22$PCSc, bnum22$PROTEGO, useNA="ifany")), 
            file="Sorties/PROTE_PCS_lprop.csv", fileEncoding = "UTF-8")
 
-#diagrammes à barre PROTEGO et SEXE 
-#non utilisé car les données de la variable SEXE ne donne pas vraiment d'explication à la vigilance
-PROTSEXE <- ggplot(bnum22) + aes(x=PROTEGO, weight=POND, fill=SEXE) +
-  geom_bar(position="fill") + 
-  labs(title="Diagramme à barre de l'attention à la protection des données personnelles selon le sexe",
-       x="Attention à la protection des données personnelles", y="Effectif (en %)",
-       caption="Source : Baromètre du numérique 2022") + theme_bw()
-ggsave("Sorties/PROTSEXE.png", plot=PROTSEXE, width=9, height=4)
+lprop_pcs_protego <- as.data.frame(lprop(table(bnum22$PCSc, bnum22$PROTEGO, useNA="ifany")))
 
 #diagramme à barres PCS PROTEGO
 
-graph_export <- ggplot(bnum22, aes(x = PCSc, fill = PROTEGO)) +
-  geom_bar(position = "dodge") +
-  labs(x = "Groupe socioprofessionnel", y = "Nombre d'observations", fill = "Vigilance envers les données") +
+graph_export <- ggplot(data = as.data.frame(lprop_pcs_protego), aes(x = Var1, y = Freq, fill = Var2)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "Groupes socioprofessionnels", y = "Pourcentage", fill = "Vigilance envers les données") +
   ggtitle("Vigilance envers les données par groupe socioprofessionnel") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-ggsave("sorties/Graphique_PCS.png", plot = graph_export, width = 6, height = 3, bg = "white")
+
+ggsave("Sorties/Graphique_PCS.png", plot = graph_export, width = 6, height = 3, bg = "white")
